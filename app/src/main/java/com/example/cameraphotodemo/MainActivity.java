@@ -126,8 +126,6 @@ public class MainActivity extends AppCompatActivity {
                 file = createImageFile(context);
                 if (file != null){
                     //Android10以下
-                    //需要上传的图片的保存路径
-                    String imagePath = file.getAbsolutePath();
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
                         //适配Android7.0文件权限
                         uri = FileProvider.getUriForFile(context, "com.example.camera.test", file);
